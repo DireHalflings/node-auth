@@ -27,10 +27,9 @@ app.use('/users', usersRouter);
 app.use('/login', loginRouter);
 app.use('/message', messageRouter);
 
-app.get('*', (req, res) => {
-    console.log("Hello from Heroku!");
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.join(__dirname+'/client/build/index.html'));
+// });
 
 // spin up
 app.listen(port, () => console.log(`Server up and running on port ${ port }!`));
